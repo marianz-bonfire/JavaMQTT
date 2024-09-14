@@ -8,11 +8,11 @@ package JavaMQTT.utils;
  *
  * @author Tarsier
  */
-
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 public class MqttUtil {
+
     public MemoryPersistence persistence = new MemoryPersistence();
 
     public MqttClient client;
@@ -25,7 +25,7 @@ public class MqttUtil {
             connOpts = new MqttConnectOptions();
             connOpts.setCleanSession(true);
             connOpts.setAutomaticReconnect(true);
-            if(username != null && !username.isEmpty() && password != null && !password.isEmpty()){
+            if (username != null && !username.isEmpty() && password != null && !password.isEmpty()) {
                 connOpts.setUserName(username);
                 connOpts.setPassword(password.toCharArray());
             }
